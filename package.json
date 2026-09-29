@@ -1,0 +1,20 @@
+{
+  "name": "startup-from-zero-founder-decision-tree",
+  "version": "2.0.0",
+  "description": "The complete founder decision tree and operating guide platform.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "node -e \"const fs = require('fs'); let guide = fs.readFileSync('guide-data.js', 'utf8').replace(/export const /g, 'const '); let tree = fs.readFileSync('tree-data.js', 'utf8').replace(/export const /g, 'const '); let app = fs.readFileSync('app.js', 'utf8').replace(/import {[^}]+} from '\\.\\/guide-data\\.js';/, '').replace(/import {[^}]+} from '\\.\\/tree-data\\.js';/, ''); fs.writeFileSync('bundle.js', guide + '\\n\\n' + tree + '\\n\\n' + app); console.log('Built bundle.js successfully');\""
+  },
+  "keywords": [
+    "startup",
+    "decision-tree",
+    "founder-operating-system",
+    "mvp",
+    "validation",
+    "venture-capital"
+  ],
+  "author": "Founder Operating Guide",
+  "license": "MIT"
+}
